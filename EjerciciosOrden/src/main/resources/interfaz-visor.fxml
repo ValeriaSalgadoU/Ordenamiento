@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="520.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.unam.fes.visor.ControladorVisor">
+    <left>
+        <VBox prefWidth="210.0" spacing="12.0" style="-fx-background-color: #0f172a;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="18.0" left="16.0" right="16.0" top="18.0" />
+            </padding>
+            <children>
+                <Label style="-fx-text-fill: #f8fafc; -fx-font-size: 16px; -fx-font-weight: bold;" text="Panel de Control" />
+                <Separator opacity="0.25" />
+
+                <Button fx:id="btnNuevoArreglo" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionGenerar" style="-fx-background-color: #10b981; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="Mezclar / Nuevo" />
+
+                <Label style="-fx-text-fill: #94a3b8; -fx-font-size: 12px; -fx-font-weight: bold;" text="ALGORITMOS" />
+
+                <Button fx:id="btnMetodoBurbuja" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionBurbuja" style="-fx-background-color: #1e293b; -fx-text-fill: #e2e8f0; -fx-border-color: #334155; -fx-cursor: hand;" text="1. Burbuja" />
+                <Button fx:id="btnMetodoSeleccion" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionSeleccion" style="-fx-background-color: #1e293b; -fx-text-fill: #e2e8f0; -fx-border-color: #334155; -fx-cursor: hand;" text="2. Selección" />
+                <Button fx:id="btnMetodoInsercion" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionInsercion" style="-fx-background-color: #1e293b; -fx-text-fill: #e2e8f0; -fx-border-color: #334155; -fx-cursor: hand;" text="3. Inserción" />
+                <Button fx:id="btnMetodoMezcla" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionMezcla" style="-fx-background-color: #1e293b; -fx-text-fill: #e2e8f0; -fx-border-color: #334155; -fx-cursor: hand;" text="4. Mezcla" />
+                <Button fx:id="btnMetodoQuickSort" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionQuickSort" style="-fx-background-color: #1e293b; -fx-text-fill: #e2e8f0; -fx-border-color: #334155; -fx-cursor: hand;" text="5. QuickSort" />
+
+                <Separator opacity="0.25" />
+                <Label style="-fx-text-fill: #94a3b8; -fx-font-size: 12px;" text="Retraso animación (ms):" />
+                <Slider fx:id="controlVelocidad" max="180.0" min="5.0" value="40.0" />
+
+                <Label fx:id="etiquetaEstado" style="-fx-text-fill: #38bdf8; -fx-font-size: 12px;" text="Estado: En espera" wrapText="true" />
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <StackPane fx:id="areaCentral" prefHeight="520.0" prefWidth="730.0" style="-fx-background-color: #f1f5f9;" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>
