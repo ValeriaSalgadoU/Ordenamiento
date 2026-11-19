@@ -71,7 +71,7 @@ public class ListaDoble<E> {
 
     public E obtenerNodo(int indice) {
         NodoDoble<E> temp = cabeza;
-        for (int contador = 0; contador < indice && temp != null; contador++, temp = temp.getSiguiente());
+        for (int contador = 0; contador < indice && temp != null; contador++, temp = temp.getSiguiente()) ;
         return (temp != null) ? temp.getDato() : null;
     }
 

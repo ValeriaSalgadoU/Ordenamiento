@@ -87,10 +87,14 @@ public class ArbolExpresion {
 
 
         switch (simbolo) {
-            case '+': return izq + der;
-            case '-': return izq - der;
-            case '*': return izq * der;
-            case '/': return izq / der;
+            case '+':
+                return izq + der;
+            case '-':
+                return izq - der;
+            case '*':
+                return izq * der;
+            case '/':
+                return izq / der;
             default:
                 throw new IllegalArgumentException("Operador desconocido: " + simbolo);
         }

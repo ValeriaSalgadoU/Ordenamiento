@@ -1,7 +1,8 @@
 package mx.unam.fes;
+
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class ejercicio2 {
     public static void main(String[] args) {
@@ -9,7 +10,7 @@ public class ejercicio2 {
         /**
          * lee y filtra los numeros de 30 a 150
          */
-        try (BufferedReader lector = new BufferedReader(new FileReader("numeros.txt"))){
+        try (BufferedReader lector = new BufferedReader(new FileReader("numeros.txt"))) {
             String linea;
 
             while ((linea = lector.readLine()) != null) {
@@ -27,7 +28,7 @@ public class ejercicio2 {
              * por si hay algun error
              */
         } catch (IOException e) {
-            throw new RuntimeException("error al leer", e );
+            throw new RuntimeException("error al leer", e);
         }
         /**
          * conteo de las veces que se repite y 151 para un rango de 0 a 150

@@ -1,16 +1,18 @@
 package mx.unam.fes;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
+
 public class ejercicio1 {
     public static void main(String[] args) {
         Lista<Integer> lista = new Lista<Integer>();
         Random random = new Random();
-        for (int i = 0; i< 10000; i++) {
+        for (int i = 0; i < 10000; i++) {
             int numero = random.nextInt(300) + 1;
             lista.agregarCola(numero);
         }
-        try (FileWriter escritor = new FileWriter("numeros.txt")){
+        try (FileWriter escritor = new FileWriter("numeros.txt")) {
             StringBuilder linea = new StringBuilder();
 
             for (int i = 0; i < lista.getLongitud(); i++) {
@@ -24,7 +26,7 @@ public class ejercicio1 {
                     linea.setLength(0);
                 }
             }
-        }catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

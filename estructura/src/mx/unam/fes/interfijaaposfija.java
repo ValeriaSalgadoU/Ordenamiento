@@ -5,8 +5,8 @@ public class interfijaaposfija {
      * define de domnde procede cada operador
      */
     private static int precedencia(char operador) {
-        switch(operador) {
-            case '+' :
+        switch (operador) {
+            case '+':
             case '-':
                 return 1;
             case '*':
@@ -16,9 +16,11 @@ public class interfijaaposfija {
                 return 0;
         }
     }
-    private static boolean esOperador (char c) {
-        return c == '+' || c == '-' || c == '*' || c == '/' ;
+
+    private static boolean esOperador(char c) {
+        return c == '+' || c == '-' || c == '*' || c == '/';
     }
+
     public static String convertir(String infija) {
         Pila<Character> pila = new Pila<Character>();
         StringBuilder posfija = new StringBuilder();
@@ -35,14 +37,13 @@ public class interfijaaposfija {
 
             } else if (c == '(') {
                 pila.push(c);
-            }
-            else if (c == ')') {
+            } else if (c == ')') {
                 while (!pila.esVacia() && pila.peek() != '(') {
                     posfija.append(pila.pop());
                 }
                 pila.pop();
 
-            }else if (esOperador(c)) {
+            } else if (esOperador(c)) {
                 /*
                  * saca operadores antes de meter el nuevo
                  */
@@ -61,6 +62,7 @@ public class interfijaaposfija {
         }
         return posfija.toString();
     }
+
     public static void main(String[] args) {
         String[] pruebas = {
                 "3+4*8"

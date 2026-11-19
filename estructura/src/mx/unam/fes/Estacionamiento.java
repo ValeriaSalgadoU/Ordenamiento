@@ -3,29 +3,6 @@ package mx.unam.fes;
 import java.util.Random;
 
 public class Estacionamiento {
-    static class Auto {
-        private String placa;
-        private int tiempoEntrada;
-
-        public Auto(String placa, int tiempoEntrada) {
-            this.placa = placa;
-            this.tiempoEntrada = tiempoEntrada;
-        }
-
-        public String getPlaca() {
-            return placa;
-        }
-
-        public int getTiempoEntrada() {
-            return tiempoEntrada;
-        }
-
-        @Override
-        public String toString() {
-            return placa;
-        }
-    }
-
     public static void main(String[] args) throws InterruptedException {
         Cola<Auto> estacionamiento = new Cola<Auto>();
         Random random = new Random();
@@ -66,5 +43,28 @@ public class Estacionamiento {
         }
 
         System.out.println("Autos que quedaron dentro: " + estacionamiento.getLongitud());
+    }
+
+    static class Auto {
+        private String placa;
+        private int tiempoEntrada;
+
+        public Auto(String placa, int tiempoEntrada) {
+            this.placa = placa;
+            this.tiempoEntrada = tiempoEntrada;
+        }
+
+        public String getPlaca() {
+            return placa;
+        }
+
+        public int getTiempoEntrada() {
+            return tiempoEntrada;
+        }
+
+        @Override
+        public String toString() {
+            return placa;
+        }
     }
 }

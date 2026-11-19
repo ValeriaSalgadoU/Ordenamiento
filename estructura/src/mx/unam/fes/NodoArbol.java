@@ -2,7 +2,7 @@ package mx.unam.fes;
 
 public class NodoArbol<E> {
 
-     E dato;
+    E dato;
 
     NodoArbol<E> izquierdo;
 
